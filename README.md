@@ -9,9 +9,7 @@ The data files used in these notebooks is sourced from: "UCI ML Drug Review data
 
 These csv files are included in the repository and should be placed in the designated directory as shown in the notebook file paths.
 
-## Installation
-
-### Prerequisites
+## Prerequisites
 - Python 3.8 or later
 - Jupyter Notebook or JupyterLab
 
