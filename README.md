@@ -1,61 +1,103 @@
+# Drug Review Analysis
 
-# Python Projects for Drug Review Analysis
+<div align="center">
+  <a href="https://isel.pt" target="_blank">
+    <img src="./img/01_ISEL-Logotipo-RGB_Horizontal.png" alt="ISEL logo" width="400">
+  </a>
+  <h3 align="center">Exploratory Data Analysis: Drug Review Analysis</h3>
+</div>
 
 ## Description
-This repository contains three Jupyter notebooks that handle different aspects of drug review data analysis: Exploratory Data Analysis, Cleaning and Preprocessing, and performing Sentiment classification.
+
+This repository contains a comprehensive analysis of drug review data using natural language processing and sentiment analysis techniques. The project is divided into three Jupyter notebooks that handle different aspects of the analysis workflow:
+
+- Exploratory Data Analysis
+- Cleaning and Preprocessing
+- Sentiment Classification
 
 ## Data Source
-The data files used in these notebooks is sourced from: "UCI ML Drug Review dataset" - J. Li, "Kuc hackathon winter 2018 dataset," Kaggle, 2018. 
 
-These csv files are included in the repository and should be placed in the designated directory as shown in the notebook file paths.
+The data used in this project is sourced from:
+- "UCI ML Drug Review dataset" - J. Li, "Kuc hackathon winter 2018 dataset," Kaggle, 2018.
+
+The CSV files are included in the repository and should be placed in the designated directory as shown in the notebook file paths.
 
 ## Prerequisites
+
+### System Requirements
 - Python 3.8 or later
 - Jupyter Notebook or JupyterLab
 
-### Libraries
-Install the following Python libraries using pip:
+### Required Libraries
+Install the following Python libraries:
 
 ```bash
 pip install pandas numpy matplotlib nltk textblob
 ```
 
 ### NLTK Resources
-Ensure you have the following NLTK resources downloaded:
+Download the necessary NLTK resources:
 
 ```python
 import nltk
-nltk.download('punkt')  # For tokenizing text
+nltk.download('punkt')               # For tokenizing text
 nltk.download('averaged_perceptron_tagger')  # For part-of-speech tagging
-nltk.download('wordnet')  # For lemmatization
-nltk.download('stopwords')  # Stopwords that can be filtered out in preprocessing
-nltk.download('vader_lexicon')  # For VADER sentiment analysis
+nltk.download('wordnet')             # For lemmatization
+nltk.download('stopwords')           # For filtering out common stopwords
+nltk.download('vader_lexicon')       # For VADER sentiment analysis
 ```
 
-### Additional Setup
-Set the style of plots to 'ggplot' for better aesthetics:
+### Plot Configuration
+For better visualizations, set the plot style:
 
 ```python
 import matplotlib.pyplot as plt
-
 plt.style.use('ggplot')
 ```
 
-## Usage
-Open your command line interface and run Jupyter Notebook:
+## Getting Started
 
-```bash
-jupyter notebook
-```
+1. Clone this repository
+2. Install the required libraries
+3. Download the necessary NLTK resources
+4. Run Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
 
 ## Notebooks
 
 ### 1. Data Visualization (`data-visualisation.ipynb`)
-This notebook includes various exploratory data analysis (EDA) techniques to visualize different aspects of drug reviews. This notebook begins with an outline of the various exploratory data analysis (EDA) techniques implemented.
+This notebook performs exploratory data analysis (EDA) on the drug review dataset to understand:
+- Distribution of reviews across different drugs
+- Rating patterns
+- Review length analysis
+- Temporal trends in drug reviews
 
 ### 2. Data Cleaning and Pre-processing (`data-cleaning-and-pre-processing.ipynb`)
-This notebook focuses on preparing the raw data for analysis. The notebook starts by detailing its structure focused on data cleaning tasks. It prepares the raw data for analysis by cleaning text data, handling missing values, and removing unnecessary columns.
+This notebook focuses on preparing the raw data for analysis by:
+- Cleaning text data
+- Handling missing values
+- Removing unnecessary columns
+- Implementing text normalization techniques (tokenization, lemmatization, etc.)
 
 ### 3. Review Sentiment Classification (`review-sentiment-classification.ipynb`)
-This notebook outlines its structure at the beginning, focusing on applying sentiment analysis using TextBlob and VADER to classify the polarity of drug reviews. It also includes sections for visualizing the results and comparing different sentiment metrics.
+This notebook applies sentiment analysis techniques to classify the polarity of drug reviews:
+- Using TextBlob for basic sentiment analysis
+- Implementing VADER sentiment analysis for more nuanced results
+- Visualizing sentiment distribution across different drugs
+- Comparing sentiment metrics with user ratings
 
+## Limitations
+
+- This is a proof of concept and should not replace professional medical advice
+- Recommendations are limited by the quality and quantity of the training data
+- The system does not account for individual patient factors such as age, gender, or medical history
+
+## Acknowledgments
+
+Developed by Ana Sofia Pinto as part of the DrugDRecSys-SUSA dissertation.
+
+## License
+
+[MIT License](LICENSE)
